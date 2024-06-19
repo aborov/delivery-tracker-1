@@ -1,14 +1,14 @@
 class DeliveriesController < ApplicationController
   def index
-    if current_user != nil
+    # if current_user != nil
     matching_deliveries = Delivery.all
 
     @list_of_deliveries = matching_deliveries.order({ :created_at => :desc })
 
     render({ :template => "deliveries/index" })
-    else
-      redirect_to "/users/sign_in"
-    end
+    # else
+    #   redirect_to "/users/sign_in"
+    # end
   end
 
   def show

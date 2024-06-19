@@ -11,6 +11,7 @@
   </head>
 
   <body>
+  <div class="container">
     <nav>
       <% if current_user != nil %>
         <a href="/">Delivery Tracker</a>
@@ -25,6 +26,11 @@
       <% end %>
     </nav>
     <hr>
+     <% flash.each do |key, message| %>
+      <div class="alert alert-<%= key %>"><%= message %></div>
+    <% end %>
+
     <%= yield %>
+    </div>
   </body>
 </html>
