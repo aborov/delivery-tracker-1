@@ -99,8 +99,7 @@
 
         <div>
           <small>
-            Updated about
-            <%= a_delivery.updated_at.strftime("%Y-%m-%d") %>
+            <%= "Updated #{time_ago_in_words(a_delivery.updated_at)} ago" %>
             <a href="/delete_delivery/<%= a_delivery.id %>">Delete</a>
           </small>
         </div>
