@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ .past-date {
+  color: red;
+ }
+
+ .waiting_on {
+  background-color: lightgoldenrodyellow;
+ }
+
+ .received {
+  background-color: lightgreen;
+ }

@@ -64,8 +64,9 @@
         <div><%= a_delivery.description %></div>
 
         <div>
-          Supposed to arrive on
-          <%= a_delivery.supposed_to_arrive_on.strftime("%Y-%m-%d") %>
+          <% date_to_display = a_delivery.supposed_to_arrive_on %>
+          <% css_class = date_to_display < Date.today - 3 ? 'past-date' : 'future-date' %>
+          <%= content_tag(:span, "Supposed to arrive on #{date_to_display.strftime("%Y-%m-%d")}", :class => css_class) %>
         </div>
 
         <div>
