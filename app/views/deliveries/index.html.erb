@@ -10,43 +10,29 @@
 
   <div class="row">
     <div class="col">
-      <h2>
-        Expecting a package?
-      </h2>
+      <h2>Expecting a package?</h2>
 
       <form action="/insert_delivery" method="post">
 
         <input type="hidden" name="query_user_id" value="<%= current_user.id %>">
 
         <div class="form-group">
-          <label for="description_box">
-            Description
-          </label>
-
+          <label for="description_box">Description</label>
           <input type="text" class="form-control" id="description_box" name="query_description">
         </div>
 
         <div class="form-group">
-          <label for="supposed_to_arrive_on_box">
-            Supposed to arrive on
-          </label>
-
+          <label for="supposed_to_arrive_on_box">Supposed to arrive on</label>
           <input type="date" class="form-control" id="supposed_to_arrive_on_box" name="query_supposed_to_arrive_on">
         </div>
 
         <div class="form-group">
-          <label for="details_box">
-            Details
-          </label>
-
+          <label for="details_box">Details</label>
           <textarea class="form-control" id="details_box" name="query_details" rows="3"></textarea>
         </div>
 
         <input type="hidden" name="query_arrived" value="false">
-
-        <button class="btn btn-primary">
-          Log delivery
-        </button>
+        <button class="btn btn-primary">Log delivery</button>
       </form>
     </div>
   </div>
